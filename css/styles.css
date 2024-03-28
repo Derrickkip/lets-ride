@@ -8,7 +8,7 @@
   --grey: #C5C6C7;
   --font: 'PT Sans', sans-serif; }
 
-.loginMain form .primary, .loginMain form .secondary {
+.loginMain form .primary, .SignUpMain form .primary {
   height: 45px;
   width: 100%;
   font-family: var(--font);
@@ -71,29 +71,28 @@ nav {
     border-radius: 4px;
     border: none; }
 
-.loginMain {
+.loginMain, .SignUpMain {
   width: 100vw;
-  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  .loginMain form {
+  .loginMain form, .SignUpMain form {
     width: 350px; }
     @media (max-width: 768px) {
-      .loginMain form {
+      .loginMain form, .SignUpMain form {
         width: 300px; } }
-    .loginMain form .formInput {
+    .loginMain form .formInput, .SignUpMain form .formInput {
       margin-top: 20px; }
-    .loginMain form label {
+    .loginMain form label, .SignUpMain form label {
       width: 50%;
       display: flex;
       justify-content: flex-start;
       color: var(--grey);
       margin: 10px; }
-    .loginMain form p {
+    .loginMain form p, .SignUpMain form p {
       color: var(--grey); }
-    .loginMain form input {
+    .loginMain form input, .SignUpMain form input {
       width: 100%;
       height: 35px;
       font-family: var(--font);
@@ -103,13 +102,30 @@ nav {
       color: #45A29E;
       border-radius: 8px;
       padding: 10px; }
-    .loginMain form .primary {
+    .loginMain form .primary, .SignUpMain form .primary {
       background-color: var(--extraLight); }
-      .loginMain form .primary:hover {
+      .loginMain form .primary:hover, .SignUpMain form .primary:hover {
         background-color: var(--light); }
-    .loginMain form .secondary {
+    .loginMain form .secondary, .SignUpMain form .secondary {
+      height: 45px;
+      width: 100%;
+      font-family: var(--font);
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+      margin: 20px 0 20px 0;
+      display: inline-block;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
       color: #45A29E;
       background-color: transparent;
       border: solid 2px var(--light); }
+
+.loginMain {
+  height: 60vh; }
+
+.SignUpMain {
+  height: 70vh; }
 
 /*# sourceMappingURL=styles.css.map */

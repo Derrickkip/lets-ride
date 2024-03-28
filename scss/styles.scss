@@ -108,9 +108,8 @@ nav {
      
 }
 
-.loginMain {
+.loginMain, .SignUpMain {
     width: 100vw;
-    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,10 +160,28 @@ nav {
         }
 
         .secondary {
-            @include button-styles;
+            height: 45px;
+            width: 100%;
+            font-family: var(--font);
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            margin: 20px 0 20px 0;
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
             color: #45A29E;
             background-color: transparent;
             border: solid 2px var(--light);
         }
     }
+}
+
+.loginMain {
+    height: 60vh;
+}
+
+.SignUpMain {
+    height: 70vh;
 }
