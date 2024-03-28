@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+:root {
+  --background: #eeeeee;
+  --dark: #0B0C10;
+  --mid: #1F2833;
+  --light: #45A29E;
+  --extraLight: #66FCF1;
+  --grey: #C5C6C7;
+  --font: 'PT Sans', sans-serif; }
+
+.loginMain form .primary, .loginMain form .secondary {
+  height: 45px;
+  width: 100%;
+  font-family: var(--font);
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  margin: 20px 0 20px 0;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+body {
+  background: var(--mid);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font); }
+
+nav {
+  width: 100vw;
+  background-color: var(--dark);
+  padding: 20px; }
+  nav button, nav .navLink {
+    text-decoration: none;
+    color: var(--grey);
+    background-color: var(--mid);
+    padding: 9px;
+    border: solid 2px var(--light);
+    border-radius: 10px; }
+  nav img {
+    height: 80px;
+    margin-top: 40px; }
+  nav ul {
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none; }
+  nav li {
+    height: 45px;
+    width: 150px;
+    margin-top: 10px;
+    font-family: var(--font);
+    font-size: 16px;
+    border-radius: 4px;
+    border: none; }
+
+.loginMain {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .loginMain form {
+    width: 350px; }
+    @media (max-width: 768px) {
+      .loginMain form {
+        width: 300px; } }
+    .loginMain form .formInput {
+      margin-top: 20px; }
+    .loginMain form label {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      color: var(--grey);
+      margin: 10px; }
+    .loginMain form p {
+      color: var(--grey); }
+    .loginMain form input {
+      width: 100%;
+      height: 35px;
+      font-family: var(--font);
+      font-size: 16px;
+      background-color: var(--mid);
+      border: solid 2px var(--light);
+      color: #45A29E;
+      border-radius: 8px;
+      padding: 10px; }
+    .loginMain form .primary {
+      background-color: var(--extraLight); }
+      .loginMain form .primary:hover {
+        background-color: var(--light); }
+    .loginMain form .secondary {
+      color: #45A29E;
+      background-color: transparent;
+      border: solid 2px var(--light); }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import 'layout';
+
+@mixin mobile {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+  
+:root{
+  --background: #eeeeee;
+  --dark: #0B0C10;
+  --mid: #1F2833;
+  --light: #45A29E;
+  --extraLight: #66FCF1;
+  --grey: #C5C6C7;
+  --font: 'PT Sans', sans-serif;
+}
+
+%button-base {
+    height: 45px;
+    width: 100%;
+    font-family: var(--font);
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    margin: 20px 0 20px 0;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@mixin button-styles {
+    @extend %button-base
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+body {
+    background: var(--mid);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+nav {
+    width: 100vw;
+    background-color: var(--dark);
+    padding: 20px;
+
+    button, .navLink {
+        text-decoration: none;
+        color: var(--grey);
+        background-color: var(--mid);
+        padding: 9px;
+        border: solid 2px var(--light);
+        border-radius: 10px;
+    }
+    
+    img {
+        height:80px;
+        margin-top: 40px;
+    }
+    
+    
+    ul {
+    
+        max-width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+        
+    
+    li {
+    
+        height: 45px;
+        width: 150px;
+        margin-top: 10px;
+        font-family: var(--font);
+        font-size: 16px;
+        border-radius: 4px;
+        border: none;
+    }
+     
+}
+
+.loginMain {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form {
+        width: 350px;
+
+        @include mobile() {
+            width: 300px;
+        }
+
+        .formInput {
+            margin-top: 20px;
+        }
+
+        label {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            color: var(--grey) ;
+            margin: 10px;
+        }
+
+        p {
+            color: var(--grey) ;
+        }
+
+        input {
+            width: 100%;
+            height: 35px;
+            font-family: var(--font);
+            font-size: 16px;
+            background-color: var(--mid);
+            border: solid 2px var(--light);
+            color: #45A29E;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .primary {
+            @include button-styles;
+            background-color: var(--extraLight);
+
+            &:hover {
+                background-color: var(--light);
+            }
+        }
+
+        .secondary {
+            @include button-styles;
+            color: #45A29E;
+            background-color: transparent;
+            border: solid 2px var(--light);
+        }
+    }
+}
